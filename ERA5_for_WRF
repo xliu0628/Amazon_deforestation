@@ -1,9 +1,10 @@
-I like using ERA5 data for running WRF, but it is a real pain to download the ERA 5 data from the Climate Data Store. There is always a long queue. 
+I like using ERA5 data for running WRF, but it is a real pain to download the ERA 5 data from the Climate Data Store. There is always a long queue; 
+thousands of requests are queued. 
 Even I openned 64 threads to download data at the same time, it is still extremely slow. How slow. It took about 2 hours to download one single varialbe at one single pressure 
 of one single hour. 
 Fortunately, NCEP RDA has already downloaded the full dataset which can be transfered to the supercomputer I use via Globus easily. The bad news is that each data file contains
 global fields which makes storing and then preprocessing the data using WRF-WPS very slow (how slow? slower than what I can tolerate. But I realized more and more that 
-the seemingly slowest turns out to be the fastest more often than not). 
+the seemingly slowest turns out to be the fastest more often than not). ; 
 
 Well, what should I do? Two ways: 
 1. transfer all the data in grib format and then preprocess them using WRF-WPS. 
